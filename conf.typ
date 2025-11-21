@@ -39,7 +39,7 @@
 #let slide(title: auto, ..args) = touying-slide-wrapper(
 	self => {
 
-	  	let header(self) = {
+	  	let header-content = {
 			set align(top)
 			show: components.cell.with(fill: self.colors.primary, inset: 1em)
 
@@ -56,7 +56,7 @@
 			}
 		}
 
-	  	let footer(self) = {
+	  	let footer-content = {
 			set align(bottom)
 			show: components.cell.with(fill: self.colors.primary, inset: 1em)
 			set align(horizon)
@@ -66,13 +66,10 @@
 			)
 			utils.call-or-display(self, self.info.author)
 			h(1fr)
-		
-			context {
-				utils.slide-counter.display() + " / " + utils.last-slide-number
-			}
+			context utils.slide-counter.display() + " / " + utils.last-slide-number
   		}
 	
-		let conf = config-page(header: header, footer: footer)
+		let conf = config-page(header: header-content, footer: footer-content)
 	  	touying-slide(self: utils.merge-dicts(self, conf), ..args)
 	}
 )
@@ -119,7 +116,10 @@
 			neutral-darkest: rgb("#000000"),
 		),
 		config-methods(alert: utils.alert-with-primary-color),
-		config-common(slide-fn: slide, new-section-slide-fn: new-section-slide),
+		config-common(
+			slide-fn: slide, 
+			new-section-slide-fn: new-section-slide
+		),	
 		config-info(..args)
     )
 	
