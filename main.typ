@@ -103,21 +103,28 @@ Hello world
 
 = Quantum Mechanics
 
-== QM --- States 
-The state of a quantum system is a vector in a *Hilbert* space, that is . 
-Condizione di ortonormalità: 
-$ chevron.l e_i|e_j chevron.r = delta_(i j) $
-
-Relazione di completezza (o risoluzione dell'identità):
-$ I = sum_i |e_i chevron.r chevron.l e_i| $
-
 == QM --- States
-$ |psi chevron.r = sum_i |e_i chevron.r chevron.l e_i|psi chevron.r = sum_i |e_i chevron.r c_i^psi $
+#slide[
+	A quantum state is a vector $|psi chevron.r$ in a *Hilbert* space, that is a complete inner product space with normalized elements.
+	
+	#pause
+	- *Basis Properties*
+	$ chevron.l e_i|e_j chevron.r = delta_(i j) quad quad I = sum_i |e_i chevron.r chevron.l e_i| $
 
+	#pause
+	- *State representation* 
+	$ |psi chevron.r = sum_i |e_i chevron.r chevron.l e_i|psi chevron.r = sum_i c_i^psi|e_i chevron.r $
+	$c_i^psi = chevron.l e_i|psi chevron.r$ are *probability amplitudes* 
+][
+	#pause
+	- *Inner product* 
+	$ chevron.l phi|psi chevron.r = sum_i chevron.l phi|e_i chevron.r chevron.l e_i|psi chevron.r = sum_i (c_i^phi)^* c_i^psi $
 
-$ chevron.l psi|psi chevron.r = sum_i chevron.l psi|e_i chevron.r chevron.l e_i|psi chevron.r = sum_i (c_i^psi)^* c_i^psi = sum_i |c_i^psi|^2 gt.eq 0 $
-
-$ chevron.l phi|psi chevron.r = sum_i (c_i^phi)^* c_i^psi $
+	#pause
+	- *Normalization* 
+	$ chevron.l psi|psi chevron.r = sum_i (c_i^psi)^* c_i^psi = sum_i |c_i^psi|^2 = 1 $
+	$|c_i^psi|^2$ is the *probability* to find $|psi chevron.r$ in $|e_i chevron.r$
+]
 
 
 
@@ -191,29 +198,27 @@ $
 	$ hat(L)_k = (hat(bold(x)) times hat(bold(p)))_k = epsilon_(k i j) hat(x)_i hat(p)_j $
 
 	#pause	
-	#v(5pt)
+	#v(10pt)
 	=== *Commutation rules*
-	#v(5pt)
+	#v(10pt)
 	$
-		[hat(L)_i, hat(L)_j] &= i planck epsilon_(i j k) hat(L)_k \
-	
-		#pause	
+		[hat(L)_i, hat(L)_j] &= i planck epsilon_(i j k) hat(L)_k 
+		quad quad
 		[hat(L)_i, hat(bold(L))^2] &= 0 
 	$ 
-	since $hat(bold(L))^2$ is a scalar.
 
 	#pause
-	For example, we can use $hat(bold(L))^2$ and $hat(L)_z$ to fully determine the angular state of the system.
+	#v(10pt)
+	=== *Basis*
+	#v(10pt)
+	The common eigenstates of $hat(bold(L))^2$ and $hat(L)_z$ are $|l m chevron.r$. 
 ][
 	#pause
 	=== *Spectrum*
-	#v(5pt)
-	The common basis of $hat(bold(L))^2$ and $hat(L)_z$ is $|l m chevron.r$. 
-	
-	#pause
-	#v(5pt)
-	$ hat(bold(L))^2|l m chevron.r = planck^2 l (l + 1)|l m chevron.r $ 	
-	$ hat(L)_z|l m chevron.r = planck m|l m chevron.r quad  -l lt.eq m lt.eq l $
+	#v(10pt)
+	$hat(bold(L))^2|l m chevron.r = planck^2 l (l + 1)|l m chevron.r quad l in NN$ 
+	#v(10pt)
+	$hat(L)_z|l m chevron.r = planck m|l m chevron.r quad -l lt.eq m lt.eq l$
 
 	#pause
 	#v(15pt)
@@ -232,18 +237,19 @@ $
 	)
 ][		
 	For an electron, $quad hat(bold(mu)) = (planck q_e)/(2 m_e) hat(bold(L))/planck #pause = - g_l mu_B hat(bold(L))/planck$
+	#pause
 	where $mu_B$ is the *Bohr magneton* and $g_l$ is the *orbital g-factor* (here $g_l = 1$). 
 
 	#pause
-	The energy of the system ...
+	#v(10pt)
+	The energy of the system $|psi chevron.r = |l m_l chevron.r$ is
 	$ 
-		chevron.l hat(H) chevron.r_psi = - chevron.l B_z hat(mu)_z chevron.r_psi 
-		#pause = g_l (mu_B B_z) / planck chevron.l hat(L)_z chevron.r_psi 
+		chevron.l hat(H) chevron.r_psi 
+			= - chevron.l hat(mu)_z B_z chevron.r_psi
+			= g_l mu_B B_z 1 / planck chevron.l hat(L)_z chevron.r_psi 
 	$
 
-	#pause
-	For a fixed quantum number $l$, $hat(L)_z$ exibits an odd number of discrete eigenvalues ($2l + 1$). 
-	
+	$hat(L)_z$ exibits an odd number of discrete eigenvalues ($2l + 1$), so... 
 	#pause
 	#align(center, [=== Why do we see *two* deflected lumps?])	
 ]
@@ -261,29 +267,29 @@ $
 	$
 
 	#pause	
-	#v(5pt)
+	#v(10pt)
 	=== *Commutation rules*
-	#v(5pt)
+	#v(10pt)
 	$
-		[hat(S)_i, hat(S)_j] &= i planck epsilon_(i j k) hat(S)_k \
-	
-		#pause	
+		[hat(S)_i, hat(S)_j] &= i planck epsilon_(i j k) hat(S)_k 
+		quad quad 	
 		[hat(S)_i, hat(bold(S))^2] &= 0 
 	$ 
-	since $hat(bold(S))^2$ is a scalar.
+
+	#pause 
+	#v(10pt)
+	=== *Basis*
+	The common eigenstates of $hat(bold(S))^2$ and $hat(S)_z$ are $|s m_s chevron.r$. 
 ][
 	#pause
 	=== *Spectrum*
-	#v(5pt)
-	The common basis of $hat(bold(S))^2$ and $hat(S)_z$ is $|s m_s chevron.r$. 
-	
-	#pause
-	#v(5pt)
-	$ hat(bold(S))^2|s m_s chevron.r = planck^2 s (s + 1)|s m_s chevron.r $ 	
-	$ hat(S)_z|s m_s chevron.r = planck m_s|s m_s chevron.r quad  -s lt.eq m_s lt.eq s $
+	#v(10pt)
+	$hat(bold(S))^2|s m_s chevron.r = planck^2 s (s + 1)|s m_s chevron.r$ 	
+	#v(10pt)
+	$hat(S)_z|s m_s chevron.r = planck m_s|s m_s chevron.r quad  -s lt.eq m_s lt.eq s$
 
 	#pause
-	#v(19pt)
+	#v(20pt)
 	=== *Degeneracy*
 	The number of states with the same $s$ but different $m_s$, is:	
 	$ d_s = 2s + 1 $	
@@ -312,15 +318,17 @@ $
 
 == Total Angular Momentum
 #slide[
+	Consider a state $|psi chevron.r = |l m_l chevron.r times.o |s m_s chevron.r$
+
+	#pause
 	=== *Definition* 
 	$ hat(bold(J)) &= hat(bold(L)) + hat(bold(S)) $
-	
 	#pause
 	$ hat(bold(J))^2 = hat(bold(L))^2 + hat(bold(S))^2 + 2 hat(bold(S)) dot hat(bold(L)) $
 	
 	#pause
 	=== *Commutation rules*
-	#v(10pt)
+	#v(5pt)
 	$ 
 		[hat(J)_i, hat(J)_j]= i planck epsilon_(i j k) hat(J)_k 
 		quad quad 
@@ -328,65 +336,98 @@ $
 	$
 
 	#pause
-	$
-		[hat(J)_z, hat(bold(L))^2] = [hat(J)_z, hat(bold(S))^2] = 0
-	$
-	$
-		[hat(bold(J))^2, hat(bold(L))^2] = [hat(bold(J))^2, hat(bold(S))^2] = 0
-	$
+	#v(5pt)
+	=== *Basis*
+	The common eigenstates of $hat(bold(J))^2$, $hat(J)_z$ are $|j m_j chevron.r$. 
 
 ][
 	#pause
 	=== *Spectrum*
-	#v(5pt)
-	The common basis of $hat(bold(J))^2, hat(J)_z, hat(bold(L))^2, hat(bold(S))^2$ is $|j m_j l s chevron.r$. 
-	
-	#pause
-	#v(5pt)
+	#v(10pt)
 	$ hat(bold(J))^2|j m_j chevron.r = planck^2 j (j + 1)|j m_j chevron.r quad |l - s| lt.eq j lt.eq l + s $	
 	$ hat(J)_z|j m_j chevron.r = planck m_j|j m_j chevron.r quad  -j lt.eq m_j lt.eq j $
 
 	#pause
+	#v(20pt)
 	=== *Degeneracy*
+	$ d_j = 2j + 1 #pause = (2l + 1)(2s + 1) $
 ]
 
 
 == Coupling of Angular Momenta
-=== *Spin-Orbit Coupling*
-$
-	bold(B)(bold(r)) = q_e / (4 pi epsilon.alt_0 c^2 m_e) hat(bold(L))/(|bold(r)|^3)
-$
-$
-	hat(H)_(text("s-o")) 	
-		&= - 1/2 hat(bold(mu))_s dot bold(B) \ #pause
-		&prop 1/r^3 hat(bold(S)) dot hat(bold(L)) \ #pause
-		&prop 1/r^3 (hat(bold(J))^2 - hat(bold(L))^2 - hat(bold(S))^2)
-$
+#slide[
+	Consider the magnetic field experienced by an $e^-$ orbiting around a nucleus with $Z$ $p^+$
+	$ bold(B)(bold(r)) = (Z q_e) / (4 pi epsilon.alt_0 c^2 m_e) hat(bold(L))/(|bold(r)|^3) $
 
-#pause
-We can choose which basis to use to represent 
+	#pause
+	#v(20pt)
+	*Spin-Orbit coupling* $quad hat(H)_(text("s-o")) = - 1/2 hat(bold(mu))_s dot bold(B)$
+
+	#pause
+	$
+		hat(H)_(text("s-o")) 	
+			&prop 1/r^3 hat(bold(S)) dot hat(bold(L)) \
+			#pause
+			&prop 1/r^3 (hat(bold(J))^2 - hat(bold(L))^2 - hat(bold(S))^2)
+	$
+][
+
+	#pause 
+	We can represent the $e^-$ state using the basis 
+	$ { hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z } $
+ 	
+	#pause
+	Another option is the *coupled* basis 
+	$ { hat(bold(J))^2, hat(J)_z, hat(bold(L))^2, hat(bold(S))^2 } $ 
+	since
+	$
+		[hat(J)_z, hat(bold(L))^2] = [hat(J)_z, hat(bold(S))^2] = 0 \
+		[hat(bold(J))^2, hat(bold(L))^2] = [hat(bold(J))^2, hat(bold(S))^2] = 0
+	$
+]
 
 
 == Total Magnetic Momentum
 $ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S))) $
 
-$ |psi chevron.r = |l m_l chevron.r times.o |s m_s chevron.r $
-
-$ 
-	xi_(m_l m_s) &= (mu_B B_z) / planck (chevron.l hat(L)_z chevron.r_psi + 2 chevron.l hat(S)_z chevron.r_psi) \
-	&= (mu_B B_z) / planck (m_l + 2 m_s)
-$
 
 
 == Energy Spectra in Magnetic Field
+	$ 
+		hat(H) = hat(H)_0 + hat(H)_(text("s-o")) + (mu_B B_z)/planck (hat(L)_z + 2hat(S)_z)
+	$
+
 #slide[
-	=== Paschen-Back Limit $quad mu_B B >> xi$
-	Hello world 
+	=== Paschen-Back Effect $quad mu_B B >> xi$
+	$ 
+		xi_(m_l m_s) &= (mu_B B_z) / planck (chevron.l hat(L)_z chevron.r_psi + 2 chevron.l hat(S)_z chevron.r_psi) \
+		&= (mu_B B_z) / planck (m_l + 2 m_s)
+	$
+
+	#pause
+	=== *Features*
+	- Spin-orbit coupling negligible
+	- $L$ and $S$ precess independently around $B$
+	- Good quantum numbers: $m_l$, $m_s$
+	- Linear splitting in $B$
 
 ][
-	=== Zeeman Limit $quad mu_B B << xi$
-	Hello world
+	=== Zeeman Effect $quad mu_B B << xi$
+	#pause
+	=== *Anomalous Zeeman Effect*
+	- Spin-orbit coupling dominant
+	- $L$ and $S$ coupled to $J$
+	- Good quantum numbers: $j$, $m_j$
+	- Energy shift: $Delta E = mu_B B g_j m_j$
+	
+	#pause
+	=== *Landé g-factor*
+	$
+		g_j = 1 + (j(j+1) + s(s+1) - l(l+1))/(2j(j+1))
+	$
 ]
+
+
 
 == Boson & Fermions
 Hello world
