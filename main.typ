@@ -306,7 +306,9 @@ $
 ][		
 	=== Why do we see two deflected lumps? *Spin*!
 	#v(10pt)
-	
+	=== *Total Magnetic Momentum*
+	$ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S)	)) $
+
 	#pause
 	$ d_s = 2 = 2 s + 1 quad => quad s = 1/2$
 	
@@ -385,10 +387,6 @@ $
 		[hat(bold(J))^2, hat(bold(L))^2] = [hat(bold(J))^2, hat(bold(S))^2] = 0
 	$
 ]
-
-
-== Total Magnetic Momentum
-$ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S))) $
 
 
 
