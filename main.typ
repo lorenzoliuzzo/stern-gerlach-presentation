@@ -8,21 +8,14 @@
 
 #title-slide()
 
-== Historical Context
-=== Planck quanti 
-Hello world 
-
-
-=== einstein photoe
-Hello world 
-
-
-=== bohr atom
-Hello world 
-
-
-
-= Experimental Apparatus
+= Experiment description
+== Apparatus
+#align(
+	horizon, 
+	figure(
+		image("assets/apparatus.png", width: 70%)
+	)
+)
 
 == Angular & Magnetic momenta
 #slide[
@@ -51,17 +44,6 @@ Hello world
 ]
 
 
-== Apparatus
-#slide[][
-	#align(
-		horizon, 
-		figure(
-			image("assets/apparatus.png", width: 100%),
-			caption: "Stern-Gerlach apparatus."
-		)
-	)
-]
-
 == Magnetic Interaction
 #slide[
 	#figure(
@@ -81,18 +63,36 @@ Hello world
 ]
 
 
-== Experimental Outcome
-#grid(
-	columns: 2,
-
-	figure(image("assets/predicted.png", width: 70%)),
-	figure(image("assets/observed.png", width: 65%))
-)
-#pause
-#v(20pt)
-#align(center, [=== Why do we see two deflected lumps?])	
 
 
+
+= Experimental Results
+== Classical Results
+#slide[
+	#align(horizon + left, figure(image("assets/predicted.png", width: 60%)))
+][
+	Diocane
+]
+
+
+
+== Observed Results
+#align(horizon + center, figure(image("assets/observed.png", width: 30%)))
+
+#focus-slide[=== Why two deflected spots?]
+
+= Historical Context
+== Historical Context
+=== Planck quanti 
+Hello world 
+
+
+=== einstein photoe
+Hello world 
+
+
+=== bohr atom
+Hello world 
 
 = Quantum Mechanics
 
@@ -215,15 +215,13 @@ $
 	#v(15pt)
 	=== *Degeneracy* $quad d_l = 2l + 1$	
 ]
-  
 
 
-== Experimental Outcome
+#focus-slide[QM SG \ Theoretical Outcome]
+
+== Theoretical Outcome
 #slide[
-	#figure(
-		image("assets/outcome.png", width: 50%),
-		caption: [Stern-Gerlach theoretical versus experimental results.]
-	)
+	#align(horizon + left, figure(image("assets/observed.png", width: 50%)))
 ][		
 	For an electron, $quad hat(bold(mu)) = (planck q_e)/(2 m_e) hat(bold(L))/planck #pause = - g_l mu_B hat(bold(L))/planck$
 	#pause
@@ -237,16 +235,13 @@ $
 			= - chevron.l hat(mu)_z B_z chevron.r_psi
 			= g_l mu_B B_z 1 / planck chevron.l hat(L)_z chevron.r_psi 
 	$
-
 	$hat(L)_z$ exibits an odd number of discrete eigenvalues ($2l + 1$), so... 
-	#pause
-	#align(center, [=== Why do we see *two* deflected lumps?])	
 ]
 
+#focus-slide[=== Why two deflected spots?]
 
 
 = Spin
-
 == QM --- Intrinsic Angular Momentum
 #slide[
 	#v(10pt)
@@ -273,23 +268,47 @@ $
 ]
 
 
+== QM --- Total Magnetic Momentum
+#slide[
+	=== *Definition*
+	#v(5pt)
+	$ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S)	)) $
+
+	#pause	
+	#v(10pt)
+	=== *Commutation rules*
+	#v(10pt)
+	$
+		[hat(L)_i, hat(L)_j] &= i planck epsilon_(i j k) hat(L)_k 
+		quad quad
+		[hat(L)_i, hat(bold(L))^2] &= 0 
+	$ 
+][
+	#pause
+	#v(10pt)
+	=== *Basis*
+	We can represent the $e^-$ state using the basis  
+	$ { hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z } quad => quad |psi chevron.r equiv |l m_l chevron.r times.o |s m_s chevron.r $
+]
+
+
 
 == Experimental Outcome
 #slide[
-	#figure(
-		image("assets/outcome.png", width: 50%),
-		caption: [Stern-Gerlach theoretical versus experimental results.]
-	)
+	#align(left, figure(image("assets/observed.png", width: 50%)))
 ][		
-	=== *Total Magnetic Momentum*
-	$ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S)	)) $
+	=== *Energy Spectrum*
+	$ 
+		E_(m_l m_s) &= (mu_B B_z) / planck (chevron.l hat(L)_z chevron.r_psi + 2 chevron.l hat(S)_z chevron.r_psi) \
+		&= (mu_B B_z) / planck (m_l + 2 m_s)
+	$
 
-	#v(20pt)
 	#pause
-	Counting the spots on the screen:
-	$ d_s = 2 = 2 s + 1 quad => quad s = 1/2 $
+	=== *Degeneracy* $quad d = (2l + 1)(2s + 1)$	
+
+	#pause
+	$ d_s = 2 quad => quad s = 1/2 quad m_s = plus.minus 1/2 $
 	
-	#v(20pt)
 	#pause
 	Also, to make the deflection magnitude match the experiment $g_s​ = 2$
 ]
