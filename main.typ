@@ -142,7 +142,7 @@ We can associate every *observable* of a system to an operator
 $ 
 	hat(O) = sum_i lambda_i|e_i chevron.r chevron.l e_i| 
 	quad quad
-	hat(O)|e_i chevron.r = lambda_i|e_i chevron.r 
+	hat(O)|e_j chevron.r = sum_i lambda_i|e_i chevron.r chevron.l e_i|e_j chevron.r = lambda_j|e_j chevron.r 
 $
 #pause
 where $lambda_i$ are the *possible results* and $|e_i chevron.r$ are the *possible states* in which the system is founded *after* the measurement. 
@@ -178,7 +178,7 @@ $
 
 
 #focus-slide[
-	Position and impulse operators \ don't commute! $ [hat(p), hat(x)] = -i planck $
+	Position and impulse \ don't commute! $ [hat(p), hat(x)] = -i planck $
 ]
 
 
@@ -204,6 +204,7 @@ $
 	#v(10pt)
 	The common eigenstates of $hat(bold(L))^2$ and $hat(L)_z$ are $|l m chevron.r$. 
 ][
+	#v(40pt)
 	#pause
 	=== *Spectrum*
 	#v(10pt)
@@ -212,14 +213,14 @@ $
 	$hat(L)_z|l m chevron.r = planck m|l m chevron.r quad -l lt.eq m lt.eq l$
 
 	#pause
-	#v(15pt)
+	#v(30pt)
 	=== *Degeneracy* $quad d_l = 2l + 1$	
 ]
 
 
-#focus-slide[QM SG \ Theoretical Outcome]
+#focus-slide[Theoretical Review]
 
-== Theoretical Outcome
+== Theoretical Review
 #slide[
 	#align(horizon + left, figure(image("assets/observed.png", width: 50%)))
 ][		
@@ -268,51 +269,47 @@ $
 ]
 
 
-== QM --- Total Magnetic Momentum
+== QM --- Final Theoretical Review
 #slide[
-	=== *Definition*
+	Consider a state $|psi chevron.r = |l m_l chevron.r times.o |s m_s chevron.r$ entering a SG apparatus
+	
+	#pause
 	#v(5pt)
 	$ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S)	)) $
 
-	#pause	
-	#v(10pt)
-	=== *Commutation rules*
-	#v(10pt)
-	$
-		[hat(L)_i, hat(L)_j] &= i planck epsilon_(i j k) hat(L)_k 
-		quad quad
-		[hat(L)_i, hat(bold(L))^2] &= 0 
-	$ 
-][
 	#pause
 	#v(10pt)
 	=== *Basis*
-	We can represent the $e^-$ state using the basis  
-	$ { hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z } quad => quad |psi chevron.r equiv |l m_l chevron.r times.o |s m_s chevron.r $
-]
-
-
-
-== Experimental Outcome
-#slide[
-	#align(left, figure(image("assets/observed.png", width: 50%)))
-][		
+	Since $[hat(L)_i, hat(S)_j] = 0$, we can represent $|psi chevron.r$ using the basis  
+	${ hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z }$
+][
 	=== *Energy Spectrum*
 	$ 
-		E_(m_l m_s) &= (mu_B B_z) / planck (chevron.l hat(L)_z chevron.r_psi + 2 chevron.l hat(S)_z chevron.r_psi) \
-		&= (mu_B B_z) / planck (m_l + 2 m_s)
+		E_(m_l m_s) &= (mu_B B_z) / planck (g_l chevron.l hat(L)_z chevron.r_psi + g_s chevron.l hat(S)_z chevron.r_psi) \
+		&= (mu_B B_z) / planck (g_l m_l + g_s m_s)
 	$
 
 	#pause
 	=== *Degeneracy* $quad d = (2l + 1)(2s + 1)$	
+]
 
+
+
+== Final Outcomes
+#slide[
+	#align(left, figure(image("assets/observed.png", width: 50%)))
+][		
 	#pause
 	$ d_s = 2 quad => quad s = 1/2 quad m_s = plus.minus 1/2 $
 	
 	#pause
+	$ Delta E_(0, plus.minus 1/2) = g_s (mu_B B_z) / planck $
+
 	Also, to make the deflection magnitude match the experiment $g_s​ = 2$
 ]
 
+#focus-slide[Thank you for the attention!]
+#pause
 
 == Total Angular Momentum
 #slide[
@@ -328,7 +325,7 @@ $
 	=== *Commutation rules*
 	#v(5pt)
 	$ 
-		[hat(J)_i, hat(J)_j]= i planck epsilon_(i j k) hat(J)_k 
+		[hat(L)_i, hat(S)_j] = 0  
 		quad quad 
 		[hat(J)_i, hat(bold(J))^2] = 0 
 	$

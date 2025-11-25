@@ -1,6 +1,7 @@
-- In conclusion, the Stern-Gerlach experiment set out to test the 'old' quantum theory of orbital angular momentum. Instead, it failed in the most spectacular way possible, providing the first direct, experimental evidence for spin—a purely quantum-mechanical property of matter that is now the foundation for everything from magnetic resonance imaging (MRI) to our entire understanding of chemistry and particle physics.
+# Experiment Description
+## Apparatus
 
-# Angular & Magnetic momenta
+## Angular & Magnetic momenta
 - The reasoning starts with classical physics. Considering the simple case of an electron orbiting a nucleus, it has an orbital angular momentum, L, defined as the cross product of its position x and momentum p.
 
 - Becasue an electron is a charged particle, its circular motion is essentially a tiny electrical current loop. And as we know from classical EM, a current loop generates a magnetic field, specifically a magnetic dipole moment, μ.
@@ -22,17 +23,23 @@ The vertical force that deflects the atom is directly proportional to the z-comp
 
 Since we know the atom's mass and we can measure the time it spends in the magnet from its velocity, we can use the simple equation of motion to relate the final deflection z(t) directly to a direct measurement of μ_z​, and therefore a direct measurement of L_z​, the z-component of the atom's angular momentum.
 
-# Experimental Outcome
+## Experimental Results
+### Classical prediction
 Classically, atoms coming from the oven would be randomly oriented. Their magnetic moments could point in any direction. This means μz​ should have a continuous range of values, from −μ to +μ. Therefore, they expected the beam to be smeared out into a single continuous on the detector, as shown on the left.
 
+### Observed results
 What they observed was shocking. The beam split cleanly into two distinct, separate spots. The atoms were deflected either 'up' or 'down' by a specific amount, and nothing in between. This result was a stunning confirmation of 'spatial quantization' of the angular momentum.
 
+### Focus
 Why do we see two deflected lumps? 
 
-# Quantum Mechanics
+# Historical Context
+## Historical Context
+
+## Quantum Mechanics
 To understand this puzzle, we have to fast-forward a few years to the development of the full, formal mathematical framework of Quantum Mechanics
 
-## QM States
+### QM States
 - In this new framework, the state of a system is no longer described by position and momentum, but by an abstract vector, which we write using Dirac's notation as the 'ket' ∣ψ⟩. This vector lives in a complex vector space called a Hilbert space.
 - Just like any 3D vector can be written as a sum of x, y, z components, a quantum state can be written in terms of a 'basis' — a set of complete, orthonormal vectors ∣ei​⟩.
 
@@ -44,7 +51,7 @@ To understand this puzzle, we have to fast-forward a few years to the developmen
 
 
 
-## QM Operators
+### QM Operators
 - Another important mathematical tool at the heart of QM are operators. 
 
 - An operator is a linear application that transforms one state vector into another. 
@@ -54,8 +61,9 @@ To understand this puzzle, we have to fast-forward a few years to the developmen
 - We also define the adjoint operator, which is the conjugate transpose of the matrix O_ij. This acts on the bra, which can be thought as a row vector state.
 
 
-## QM Operators & Observables
-We associate every observable, like i.e. momentum or energy, with a specific type of operator.
+### QM Operators & Observables
+[TODO]
+We associate every observable, like i.e. momentum or energy, with a specific type of operator. 
 
 In QM the process of measure of an observable is profound: 
 possible results of a measurement of the system are associated with exclusive and exaustive states which constitutes an orthonormal basis, and the results of the measurement is the associated eigenvalue λi in which the system as collapsed to​, 
@@ -64,34 +72,36 @@ To make physical sense, λi must be real.
 Operators that satisfy this are called Hermitian, and they are defined by the condition of self-adjointment.
 
 
-## QM Commutator
-In order to complete the mathematical frameworks of operators, we define also the commutator of two operators, [A^,B^], which is A^B^−B^A^. This practically measures if the order of operations matters.
+### QM Commutator
+In order to complete the mathematical frameworks of operators, we define also the commutator of two operators, which practically measures if the order of operations matters.
 
-Two operators are compatible if and only if the commutator is zero, the operators are said to 'commute'.
+We say that A and B are compatible if and only if their commutator is zero.
+
 This has a critical physical meaning: you can simultaneously know the values of two observables if and only if their operators commute. This is because they share the same set of eigenstates.
 
-## Canonical commutator 
-- In QM the most important example of incompatible observables is position x^ and momentum p^​. Their commutator is not zero; it's −iℏ. This is the mathematical origin of the Heisenberg Uncertainty Principle. You cannot measure both position and momentum to perfect accuracy at the same time.
+### Focus: Canonical commutator 
+In QM the most important example of incompatible observables is position and momentum operators​. Their commutator is not zero; it's −iℏ. 
+This is the mathematical origin of the Heisenberg Uncertainty Principle: you cannot measure both with perfect accuracy at the same time.
 
 
-## QM Angular momentum
-Now, let's apply this formalism to angular momentum.
+### QM Angular momentum
+Now, let's apply this formalism to the already seen angular momentum.
 From the classical definition, we can write the component k of the angular momentum as ... where e_ijk is the levi-civita tensor, which is the total antisymmetric tensor. 
 
-If we write down the L^ operators and compute their commutators, we find two key things.
+If we write down the L components and compute their commutators, we find two key things.
 
-The different components, like L^x​ and L^y​, do not commute, but generate the L_z operator. 
+Different components, like L_x​ and L_y​, do not commute, but generate the z component. 
 This also happens in classical mechanics, where for two consecutive rotation, the order of application is important.
-In QM, this means that we can't know all three components of the angular momentum vector at the same time. 
+In QM, this means that we can't know different components at the same time. 
+However, the angular momentum squared, which is a scalar, does commute with any of them.
 
-However, the angular momentum squared, which is a scalar, does commute with any component of the angular momentum.
 This means we can find simultaneous eigenstates for L^2 and one of its components, by convention we pick L_z​.
 We label these states by their quantum numbers, ∣l, m⟩.
 
 When we solve the eigenvalue problem, we find the spectrum of L^2 and L_z, which are quantized multiples of hbar^2 and hbar. 
 In particular, for a given l, since m spans from -l to l, there are 2l+1 possible values for L_z which correspond to the same value L^2, 
 
-## Experimental Outcome
+## Focus: Theoretical Review
 Okay, let's go back to the experiment.
 
 For an electron the magnetic moment operator is .
@@ -106,18 +116,18 @@ In particular, in the case of l=0 as in the original experiment, we get 2(0)+1=1
 But the experiment showed TWO spots! Why two?
 This means the angular momentum being measured, whatever it is, cannot be orbital angular momentum. The theory of quantum mechanics is correct, but our model of the atom is missing something.
 
-
-## QM - Spin
+## Focus: extra dof Q&A
 This puzzle was solved in 1925 by George Uhlenbeck and Samuel Goudsmit. They proposed that the electron possesses an intrinsic angular momentum. It's not due to its orbit; it's just a fundamental property of the particle itself, like its charge or its mass.
 They called this property spin
 
-## QM - Intrinsic Angular Momentum
+### QM - Intrinsic Angular Momentum
 We postulate that it is an angular momentum, which means it must obey the exact same commutation rules as L.
 Because it obeys the same rules, it must have the same structure: we can find simultaneous eigenstates of S^2 and S^z​, which we label ∣s,ms​⟩.
 These states have eigenvalues ℏ2s(s+1) and ℏms​ while the state degeneracy is 2s+1.
 
+### Total Magnetic Momentum
 
-## Experimental Outcome
+### Final Theoretical Review
 And this... solves everything.
 
 The total magnetic moment of the atom is the sum of its orbital and spin components. 
