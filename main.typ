@@ -34,11 +34,11 @@
 	*Magnetic* momentum $quad bold(mu) = I Sigma hat(bold(n))$
 	#pause
 	#v(10pt)
-	$ bold(mu) = (q v) / (2 pi r) pi r^2 hat(bold(n)) = q/(2m) bold(L) #pause quad => quad bold(mu) prop bold(L) $
+	$ bold(mu) = (q v) / (2 pi r) pi r^2 hat(bold(n)) = q/(2m) bold(L) quad => quad bold(mu) prop bold(L) $
 
 	#pause
 	#v(20pt)
-	The *interaction* between $bold(mu)$ and an *external magnetic field* $B$ is represented by the magnetic hamitonian
+	=== *Magnetic Hamiltonian*
 	#v(10pt)
 	$ H_(text("magn")) = - bold(mu) dot bold(B) $
 ]
@@ -52,21 +52,18 @@
 		gap: 20pt
 	)
 ][
-	#v(10pt)
-	$ bold(F)_(text("magn")) = - nabla H_(text("magn")) = nabla(bold(mu) dot bold(B)) $
-	
-	#pause
-	$ F_z = mu_z (partial B_z)/(partial z) #pause = m dot.double(z) $
-	
-	#pause
-	$ z(t) = z_0 + dot(z)_0 t + mu_z/(2 m) (partial B_z)/(partial z) t^2 $
+	#align(horizon, [
+
+		$ bold(F)_(text("magn")) = - nabla H_(text("magn")) = nabla(bold(mu) dot bold(B)) $
+		
+		#pause
+		$ F_z = mu_z (partial B_z)/(partial z) #pause = m dot.double(z) $
+
+		$ z(t) = z_0 + dot(z)_0 t + mu_z/(2 m) (partial B_z)/(partial z) t^2 $
+	])
 ]
 
 
-
-
-
-= Experimental Results
 == Classical Results
 #slide[
 	#align(horizon + left, figure(image("assets/predicted.png", width: 60%)))
@@ -83,29 +80,30 @@
 
 = Historical Context
 == Historical Context
-=== Planck quanti 
-Hello world 
+#slide[
+	#align(center, image("assets/Max_Planck_Nobel.jpg"))
+][
+	#align(center, image("assets/Albert_Einstein_Nobel.jpg"))
+][
+	#align(center, image("assets/Niels_Bohr_Nobel.jpg"))
+]
 
 
-=== einstein photoe
-Hello world 
 
 
-=== bohr atom
-Hello world 
 
 = Quantum Mechanics
 
 == QM --- States
 #slide[
-	A quantum state is a vector $|psi chevron.r$ in a *Hilbert* space, that is a complete inner product space with normalized elements.
-	
+	#align(center, [$|psi chevron.r in HH quad$ *Hilbert space*])
+
 	#pause
 	- *Basis Properties*
 	$ chevron.l e_i|e_j chevron.r = delta_(i j) quad quad I = sum_i |e_i chevron.r chevron.l e_i| $
 
 	#pause
-	- *State representation* 
+	- *Superposition Principle* 
 	$ |psi chevron.r = sum_i |e_i chevron.r chevron.l e_i|psi chevron.r = sum_i c_i^psi|e_i chevron.r $
 	$c_i^psi = chevron.l e_i|psi chevron.r$ are *probability amplitudes* 
 ][
@@ -176,22 +174,34 @@ $
 	chevron.l e_i|[hat(A), hat(B)]|e_j chevron.r = (lambda_i mu_i - lambda_j mu_j) chevron.l e_i|e_j chevron.r = 0
 $
 
-
 #focus-slide[
 	Position and impulse \ don't commute! $ [hat(p), hat(x)] = -i planck $
 ]
 
 
+== QM --- Uncertanty Principle
+#v(20pt)
+We define the *uncertainty* of an operator $hat(A)$ in a state $|psi chevron.r$ as its *standard deviation*:
+$ 
+	Delta^2 hat(A)_psi = chevron.l hat(A)^2 chevron.r_psi - (chevron.l hat(A) chevron.r_psi)^2 = chevron.l (hat(A) - chevron.l hat(A) chevron.r_psi)^2 chevron.r_psi
+$
+
+#v(30pt)
+#pause
+The uncertanty of a pair of operators must satisfy the *uncertainty principle*:
+$ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B) chevron.r_psi|^2 lt.eq chevron.l hat(A)^2 chevron.r_psi chevron.l hat(B)^2 chevron.r_psi $
+
+#focus-slide[
+	Heisemberg's Principle 
+	$ Delta^2 hat(x) Delta^2 hat(p) gt.eq planck^2/4 $
+]
+
 == QM --- Angular Momentum
-#slide[
-	=== *Definition*
-	#v(5pt)
+#align(center, [
 	$ hat(L)_k = (hat(bold(x)) times hat(bold(p)))_k = epsilon_(k i j) hat(x)_i hat(p)_j $
 
 	#pause	
-	#v(10pt)
 	=== *Commutation rules*
-	#v(10pt)
 	$
 		[hat(L)_i, hat(L)_j] &= i planck epsilon_(i j k) hat(L)_k 
 		quad quad
@@ -199,44 +209,40 @@ $
 	$ 
 
 	#pause
-	#v(10pt)
-	=== *Basis*
-	#v(10pt)
-	The common eigenstates of $hat(bold(L))^2$ and $hat(L)_z$ are $|l m chevron.r$. 
-][
-	#v(40pt)
-	#pause
+	#v(5pt)
 	=== *Spectrum*
-	#v(10pt)
-	$hat(bold(L))^2|l m chevron.r = planck^2 l (l + 1)|l m chevron.r quad l in NN$ 
-	#v(10pt)
-	$hat(L)_z|l m chevron.r = planck m|l m chevron.r quad -l lt.eq m lt.eq l$
+	$ hat(bold(L))^2|l m chevron.r = planck^2 l (l + 1)|l m chevron.r quad l in NN $ 
+	#v(5pt)
+	$ hat(L)_z|l m chevron.r = planck m|l m chevron.r quad -l lt.eq m lt.eq l $
 
 	#pause
-	#v(30pt)
+	#v(5pt)
 	=== *Degeneracy* $quad d_l = 2l + 1$	
-]
+])
 
 
-#focus-slide[Theoretical Review]
+// #focus-slide[Theoretical Review]
 
-== Theoretical Review
+== QM --- Theoretical Review
 #slide[
 	#align(horizon + left, figure(image("assets/observed.png", width: 50%)))
 ][		
-	For an electron, $quad hat(bold(mu)) = (planck q_e)/(2 m_e) hat(bold(L))/planck #pause = - g_l mu_B hat(bold(L))/planck$
-	#pause
-	where $mu_B$ is the *Bohr magneton* and $g_l$ is the *orbital g-factor* (here $g_l = 1$). 
+	$ |psi chevron.r = |l m_l chevron.r $
+
+	#pause  
+	We can rewrite the magnetic moment of $e^-$
+	$ hat(bold(mu)) = (planck q_e)/(2 m_e) hat(bold(L))/planck = - g_l mu_B hat(bold(L))/planck $
 
 	#pause
 	#v(10pt)
-	The energy of the system $|psi chevron.r = |l m_l chevron.r$ is
 	$ 
 		chevron.l hat(H) chevron.r_psi 
 			= - chevron.l hat(mu)_z B_z chevron.r_psi
 			= g_l mu_B B_z 1 / planck chevron.l hat(L)_z chevron.r_psi 
 	$
-	$hat(L)_z$ exibits an odd number of discrete eigenvalues ($2l + 1$), so... 
+	#pause
+	#v(10pt)
+	But $hat(L)_z$ exibits an odd number of discrete eigenvalues ($2l + 1$), so... 
 ]
 
 #focus-slide[=== Why two deflected spots?]
@@ -244,7 +250,7 @@ $
 
 = Spin
 == QM --- Intrinsic Angular Momentum
-#slide[
+#align(center, [
 	#v(10pt)
 	=== *Commutation rules*
 	#v(10pt)
@@ -254,59 +260,64 @@ $
 		[hat(S)_i, hat(bold(S))^2] &= 0 
 	$ 
 
+	#pause
 	#v(10pt)
-	=== *Basis*
-	The common eigenstates of $hat(bold(S))^2$ and $hat(S)_z$ are $|s m_s chevron.r$. 
-][
 	=== *Spectrum*
 	#v(10pt)
 	$hat(bold(S))^2|s m_s chevron.r = planck^2 s (s + 1)|s m_s chevron.r$ 	
 	#v(10pt)
 	$hat(S)_z|s m_s chevron.r = planck m_s|s m_s chevron.r quad  -s lt.eq m_s lt.eq s$
 
+	#pause
 	#v(20pt)
 	=== *Degeneracy* $quad d_s = 2s + 1$	
-]
+])
 
 
-== QM --- Final Theoretical Review
-#slide[
-	Consider a state $|psi chevron.r = |l m_l chevron.r times.o |s m_s chevron.r$ entering a SG apparatus
+== QM --- Theoretical Review
+#align(center, [
+	#v(15pt)
+	$|psi chevron.r = |l m_l chevron.r times.o |s m_s chevron.r quad <-> quad { hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z } $ 
 	
 	#pause
-	#v(5pt)
+	#v(15pt)
 	$ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S)	)) $
 
 	#pause
-	#v(10pt)
-	=== *Basis*
-	Since $[hat(L)_i, hat(S)_j] = 0$, we can represent $|psi chevron.r$ using the basis  
-	${ hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z }$
-][
-	=== *Energy Spectrum*
+	#v(15pt)
 	$ 
 		E_(m_l m_s) &= (mu_B B_z) / planck (g_l chevron.l hat(L)_z chevron.r_psi + g_s chevron.l hat(S)_z chevron.r_psi) \
-		&= (mu_B B_z) / planck (g_l m_l + g_s m_s)
+		pause
+		&= mu_B B_z (g_l m_l + g_s m_s)
 	$
 
 	#pause
-	=== *Degeneracy* $quad d = (2l + 1)(2s + 1)$	
-]
+	#v(15pt)
+	$ d = (2l + 1)(2s + 1) $	
+])
 
 
 
-== Final Outcomes
+== QM --- Experimental Outcome $l = 0$
 #slide[
-	#align(left, figure(image("assets/observed.png", width: 50%)))
+	#align(left + horizon, figure(image("assets/observed.png", width: 50%)))
 ][		
+	The energy degeneracy is $quad d = d_s = 2$
 	#pause
-	$ d_s = 2 quad => quad s = 1/2 quad m_s = plus.minus 1/2 $
-	
-	#pause
-	$ Delta E_(0, plus.minus 1/2) = g_s (mu_B B_z) / planck $
+	$ s = 1/2  quad => quad m_s &= plus.minus 1/2 $
+	we are measuring the spin!
 
-	Also, to make the deflection magnitude match the experiment $g_s​ = 2$
+	#pause
+	#v(15pt)
+	Measuring the spacing 
+	$ Delta E_(0, plus.minus 1/2) = g_s (mu_B B_z) $
+	We also conclude that $quad g_s​ = 2$
 ]
+
+== Conclusion
+In comparison with $L$, spin can assume both *integer* and *semi-integer* eigenvalues.
+Particles with integer and half-integer spin are called respectively *bosons* and *fermions*. 
+This distinction governs their quantum behavior.
 
 #focus-slide[Thank you for the attention!]
 #pause
@@ -315,13 +326,10 @@ $
 #slide[
 	Consider a state $|psi chevron.r = |l m_l chevron.r times.o |s m_s chevron.r$
 
-	#pause
 	=== *Definition* 
 	$ hat(bold(J)) &= hat(bold(L)) + hat(bold(S)) $
-	#pause
 	$ hat(bold(J))^2 = hat(bold(L))^2 + hat(bold(S))^2 + 2 hat(bold(S)) dot hat(bold(L)) $
 	
-	#pause
 	=== *Commutation rules*
 	#v(5pt)
 	$ 
@@ -330,22 +338,15 @@ $
 		[hat(J)_i, hat(bold(J))^2] = 0 
 	$
 
-	#pause
-	#v(5pt)
-	=== *Basis*
-	The common eigenstates of $hat(bold(J))^2$, $hat(J)_z$ are $|j m_j chevron.r$. 
-
 ][
-	#pause
 	=== *Spectrum*
 	#v(10pt)
 	$ hat(bold(J))^2|j m_j chevron.r = planck^2 j (j + 1)|j m_j chevron.r quad |l - s| lt.eq j lt.eq l + s $	
 	$ hat(J)_z|j m_j chevron.r = planck m_j|j m_j chevron.r quad  -j lt.eq m_j lt.eq j $
 
-	#pause
 	#v(20pt)
 	=== *Degeneracy*
-	$ d_j = 2j + 1 #pause = (2l + 1)(2s + 1) $
+	$ d_j = 2j +  = (2l + 1)(2s + 1) $
 ]
 
 
@@ -354,24 +355,20 @@ $
 	Consider the magnetic field experienced by an $e^-$ orbiting around a nucleus with $Z$ $p^+$
 	$ bold(B)(bold(r)) = (Z q_e) / (4 pi epsilon.alt_0 c^2 m_e) hat(bold(L))/(|bold(r)|^3) $
 
-	#pause
 	#v(20pt)
 	*Spin-Orbit coupling* $quad hat(H)_(text("s-o")) = - 1/2 hat(bold(mu))_s dot bold(B)$
 
-	#pause
 	$
 		hat(H)_(text("s-o")) 	
 			&prop 1/r^3 hat(bold(S)) dot hat(bold(L)) \
-			#pause
+	
 			&prop 1/r^3 (hat(bold(J))^2 - hat(bold(L))^2 - hat(bold(S))^2)
 	$
 ][
-
-	#pause 
+ 
 	We can represent the $e^-$ state using the basis 
 	$ { hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z } $
  	
-	#pause
 	Another option is the *coupled* basis 
 	$ { hat(bold(J))^2, hat(J)_z, hat(bold(L))^2, hat(bold(S))^2 } $ 
 	since
@@ -395,7 +392,6 @@ $
 		&= (mu_B B_z) / planck (m_l + 2 m_s)
 	$
 
-	#pause
 	=== *Features*
 	- Spin-orbit coupling negligible
 	- $L$ and $S$ precess independently around $B$
@@ -404,14 +400,12 @@ $
 
 ][
 	=== Zeeman Effect $quad mu_B B << xi$
-	#pause
 	=== *Anomalous Zeeman Effect*
 	- Spin-orbit coupling dominant
 	- $L$ and $S$ coupled to $J$
 	- Good quantum numbers: $j$, $m_j$
 	- Energy shift: $Delta E = mu_B B g_j m_j$
 	
-	#pause
 	=== *Landé g-factor*
 	$
 		g_j = 1 + (j(j+1) + s(s+1) - l(l+1))/(2j(j+1))
@@ -423,5 +417,3 @@ $
 == Boson & Fermions
 Hello world
 
-== Conclusion
-Hello world
