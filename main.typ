@@ -28,18 +28,21 @@
 	)
 ][
 	#pause
-	*Angular* momentum $quad bold(L) = bold(x) times bold(p)$
+	*Angular momentum*
+	$ bold(L) = bold(x) times bold(p) $
 
-	#v(10pt)		
-	*Magnetic* momentum $quad bold(mu) = I Sigma hat(bold(n))$
 	#pause
-	#v(10pt)
+	#v(10pt)		
+	*Magnetic momentum*
+	$ bold(mu) = I Sigma hat(bold(n)) $
+	#v(5pt)
+	#pause
 	$ bold(mu) = (q v) / (2 pi r) pi r^2 hat(bold(n)) = q/(2m) bold(L) quad => quad bold(mu) prop bold(L) $
 
 	#pause
-	#v(20pt)
-	=== *Magnetic Hamiltonian*
 	#v(10pt)
+	=== *Magnetic Hamiltonian*
+	#v(5pt)
 	$ H_(text("magn")) = - bold(mu) dot bold(B) $
 ]
 
@@ -54,7 +57,7 @@
 ][
 	#align(horizon, [
 
-		$ bold(F)_(text("magn")) = - nabla H_(text("magn")) = nabla(bold(mu) dot bold(B)) $
+		$ bold(F) = - nabla H_(text("magn")) = nabla(bold(mu) dot bold(B)) $
 		
 		#pause
 		$ F_z = mu_z (partial B_z)/(partial z) #pause = m dot.double(z) $
@@ -64,17 +67,11 @@
 ]
 
 
-== Classical Results
-#slide[
-	#align(horizon + left, figure(image("assets/predicted.png", width: 60%)))
-][
-	Diocane
-]
-
-
+== Classical Prediction
+#align(horizon + center, figure(image("assets/predicted.png", width: 40%)))
 
 == Observed Results
-#align(horizon + center, figure(image("assets/observed.png", width: 30%)))
+#align(horizon + center, figure(image("assets/observed.png", width: 38%)))
 
 #focus-slide[=== Why two deflected spots?]
 
@@ -89,14 +86,11 @@
 ]
 
 
-
-
-
 = Quantum Mechanics
 
-== QM --- States
+== QM --- States in Hilbert Space
 #slide[
-	#align(center, [$|psi chevron.r in HH quad$ *Hilbert space*])
+	$ |psi chevron.r in HH $
 
 	#pause
 	- *Basis Properties*
@@ -108,6 +102,7 @@
 	$c_i^psi = chevron.l e_i|psi chevron.r$ are *probability amplitudes* 
 ][
 	#pause
+	#v(40pt)
 	- *Inner product* 
 	$ chevron.l phi|psi chevron.r = sum_i chevron.l phi|e_i chevron.r chevron.l e_i|psi chevron.r = sum_i (c_i^phi)^* c_i^psi $
 
@@ -143,7 +138,7 @@ $
 	hat(O)|e_j chevron.r = sum_i lambda_i|e_i chevron.r chevron.l e_i|e_j chevron.r = lambda_j|e_j chevron.r 
 $
 #pause
-where $lambda_i$ are the *possible results* and $|e_i chevron.r$ are the *possible states* in which the system is founded *after* the measurement. 
+where $lambda_i$ are the *possible results* and $|e_i chevron.r$ are the *possible states* in which the system can be founded *after* the measurement. 
 #v(10pt)
 The requirements are that, *indipendently by the choice of the basis*,  
 $ chevron.l e_i|e_j chevron.r = delta_(i j) quad quad lambda_i^* = lambda_i $  
@@ -175,7 +170,7 @@ $
 $
 
 #focus-slide[
-	Position and impulse \ don't commute! $ [hat(p), hat(x)] = -i planck $
+	Canonical commutator $ [hat(p), hat(x)] = -i planck $
 ]
 
 
@@ -227,11 +222,11 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 #slide[
 	#align(horizon + left, figure(image("assets/observed.png", width: 50%)))
 ][		
-	$ |psi chevron.r = |l m_l chevron.r $
+	$ hat(bold(mu)) = (planck q_e)/(2 m_e) hat(bold(L))/planck = - g_l mu_B hat(bold(L))/planck $
 
 	#pause  
-	We can rewrite the magnetic moment of $e^-$
-	$ hat(bold(mu)) = (planck q_e)/(2 m_e) hat(bold(L))/planck = - g_l mu_B hat(bold(L))/planck $
+	#v(20pt)
+	$ |psi chevron.r = |l m_l chevron.r $
 
 	#pause
 	#v(10pt)
@@ -240,9 +235,11 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 			= - chevron.l hat(mu)_z B_z chevron.r_psi
 			= g_l mu_B B_z 1 / planck chevron.l hat(L)_z chevron.r_psi 
 	$
+
 	#pause
 	#v(10pt)
-	But $hat(L)_z$ exibits an odd number of discrete eigenvalues ($2l + 1$), so... 
+	But $hat(L)_z$ has $d_l = 2l + 1$ possible eigenvalues, which is *odd*...
+	In the case $l = 0$ we should see just one undeflected spot.
 ]
 
 #focus-slide[=== Why two deflected spots?]
@@ -280,11 +277,13 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 	$|psi chevron.r = |l m_l chevron.r times.o |s m_s chevron.r quad <-> quad { hat(bold(L))^2, hat(L)_z, hat(bold(S))^2, hat(S)_z } $ 
 	
 	#pause
-	#v(15pt)
+	#v(10pt)
 	$ hat(bold(mu)) = hat(bold(mu))_l + hat(bold(mu))_s = - mu_B/planck (g_l hat(bold(L)) + g_s hat(bold(S)	)) $
 
 	#pause
-	#v(15pt)
+	#v(10pt)
+	=== *Energy Spectrum*
+	#v(5pt)
 	$ 
 		E_(m_l m_s) &= (mu_B B_z) / planck (g_l chevron.l hat(L)_z chevron.r_psi + g_s chevron.l hat(S)_z chevron.r_psi) \
 		pause
@@ -292,32 +291,45 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 	$
 
 	#pause
-	#v(15pt)
-	$ d = (2l + 1)(2s + 1) $	
+	#v(10pt)
+	=== *Degeneracy* $quad d = (2l + 1)(2s + 1) $	
 ])
 
 
 
-== QM --- Experimental Outcome $l = 0$
+== QM --- Experimental Outcome
 #slide[
 	#align(left + horizon, figure(image("assets/observed.png", width: 50%)))
 ][		
-	The energy degeneracy is $quad d = d_s = 2$
+	The degeneracy is $quad d = d_s = 2s +1 = 2$
 	#pause
 	$ s = 1/2  quad => quad m_s &= plus.minus 1/2 $
-	we are measuring the spin!
+	#pause
+	the SG apparatus is *measuring the spin!*
 
 	#pause
 	#v(15pt)
-	Measuring the spacing 
-	$ Delta E_(0, plus.minus 1/2) = g_s (mu_B B_z) $
-	We also conclude that $quad g_s​ = 2$
+	By measuring the spacing 
+	$ Delta E_(0, plus.minus 1/2) = g_s mu_B B_z $
+	we also conclude that $quad g_s​ = 2$
 ]
 
 == Conclusion
-In comparison with $L$, spin can assume both *integer* and *semi-integer* eigenvalues.
-Particles with integer and half-integer spin are called respectively *bosons* and *fermions*. 
-This distinction governs their quantum behavior.
+#align(horizon, [
+	- Spin can assume both *integer* and *semi-integer* eigenvalues.
+	#v(30pt)
+	- Particles are classified as *bosons* or *fermions*.
+	#v(30pt)
+	- Also nuclei and molecules have a magnetic momentum which can be probed with SG 
+])
+
+== References
+#align(center, [
+	#v(40pt)
+	- #emph[Introduction to the Physics of Matter], Nicola Manini
+	#v(20pt)
+	- #emph[Fisica quantistica], Stefano Forte, Luca Rottoli
+])
 
 #focus-slide[Thank you for the attention!]
 #pause
@@ -387,10 +399,8 @@ This distinction governs their quantum behavior.
 
 #slide[
 	=== Paschen-Back Effect $quad mu_B B >> xi$
-	$ 
-		xi_(m_l m_s) &= (mu_B B_z) / planck (chevron.l hat(L)_z chevron.r_psi + 2 chevron.l hat(S)_z chevron.r_psi) \
-		&= (mu_B B_z) / planck (m_l + 2 m_s)
-	$
+	#v(5pt)
+	$ xi_(m_l m_s) = mu_B B_z (m_l + 2 m_s) $
 
 	=== *Features*
 	- Spin-orbit coupling negligible
@@ -400,6 +410,8 @@ This distinction governs their quantum behavior.
 
 ][
 	=== Zeeman Effect $quad mu_B B << xi$
+	#v(5pt)
+	$ xi_(m_j) approx.eq g_j m_j mu_B B_z $
 	=== *Anomalous Zeeman Effect*
 	- Spin-orbit coupling dominant
 	- $L$ and $S$ coupled to $J$
