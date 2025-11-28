@@ -78,10 +78,13 @@
 = Historical Context
 == Historical Context
 #slide[
+	#pause
 	#align(center, image("assets/Max_Planck_Nobel.jpg"))
 ][
+	#pause
 	#align(center, image("assets/Albert_Einstein_Nobel.jpg"))
 ][
+	#pause
 	#align(center, image("assets/Niels_Bohr_Nobel.jpg"))
 ]
 
@@ -140,7 +143,8 @@ $
 #pause
 where $lambda_i$ are the *possible results* and $|e_i chevron.r$ are the *possible states* in which the system can be founded *after* the measurement. 
 #v(10pt)
-The requirements are that, *indipendently by the choice of the basis*,  
+#pause
+The requirements are that, *independently by the choice of the basis*,  
 $ chevron.l e_i|e_j chevron.r = delta_(i j) quad quad lambda_i^* = lambda_i $  
 
 #pause
@@ -228,7 +232,6 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 	#v(20pt)
 	$ |psi chevron.r = |l m_l chevron.r $
 
-	#pause
 	#v(10pt)
 	$ 
 		chevron.l hat(H) chevron.r_psi 
@@ -292,7 +295,7 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 
 	#pause
 	#v(10pt)
-	=== *Degeneracy* $quad d = (2l + 1)(2s + 1) $	
+	=== *Degeneracy* $quad d = d_l d_s = (2l + 1)(2s + 1) $	
 ])
 
 
@@ -309,19 +312,26 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 
 	#pause
 	#v(15pt)
-	By measuring the spacing 
+	By measuring the spacing on the screen, from the energy spacing
 	$ Delta E_(0, plus.minus 1/2) = g_s mu_B B_z $
 	we also conclude that $quad g_s​ = 2$
 ]
 
 == Conclusion
-#align(horizon, [
-	- Spin can assume both *integer* and *semi-integer* eigenvalues.
-	#v(30pt)
-	- Particles are classified as *bosons* or *fermions*.
-	#v(30pt)
-	- Also nuclei and molecules have a magnetic momentum which can be probed with SG 
-])
+#v(10pt)
+- SG apparatus measures the component of *magnetic momentum* in the field-gradient direction
+#pause
+#v(15pt)
+- To describe the experimental results it was introduced the *spin*, a new degree of freedom with no classical analoguos. 
+#pause
+#v(15pt)
+- Spin can assume both *integer* and *half-integer* eigenvalues.
+#pause
+#v(15pt)
+- Particles are classified by their spin as *bosons* or *fermions*.
+#pause
+#v(15pt)
+- Also *nuclei* and *molecules* have a magnetic momentum. 
 
 == References
 #align(center, [
@@ -393,39 +403,24 @@ $ 1/4 |chevron.l [hat(A), hat(B)] chevron.r_psi|^2 lt.eq |chevron.l hat(A) hat(B
 
 
 == Energy Spectra in Magnetic Field
-	$ 
-		hat(H) = hat(H)_0 + hat(H)_(text("s-o")) + (mu_B B_z)/planck (hat(L)_z + 2hat(S)_z)
-	$
-
 #slide[
-	=== Paschen-Back Effect $quad mu_B B >> xi$
-	#v(5pt)
+	#v(20pt)
+	=== *Paschen-Back Effect* $quad mu_B B >> xi$
+	#v(20pt)
 	$ xi_(m_l m_s) = mu_B B_z (m_l + 2 m_s) $
 
-	=== *Features*
+	#v(30pt)
 	- Spin-orbit coupling negligible
-	- $L$ and $S$ precess independently around $B$
 	- Good quantum numbers: $m_l$, $m_s$
-	- Linear splitting in $B$
-
+	- Linear splitting
 ][
-	=== Zeeman Effect $quad mu_B B << xi$
-	#v(5pt)
+	#v(20pt)
+	=== *Zeeman Effect* $quad mu_B B << xi$
+	#v(20pt)
 	$ xi_(m_j) approx.eq g_j m_j mu_B B_z $
-	=== *Anomalous Zeeman Effect*
+
+	#v(30pt)
 	- Spin-orbit coupling dominant
 	- $L$ and $S$ coupled to $J$
 	- Good quantum numbers: $j$, $m_j$
-	- Energy shift: $Delta E = mu_B B g_j m_j$
-	
-	=== *Landé g-factor*
-	$
-		g_j = 1 + (j(j+1) + s(s+1) - l(l+1))/(2j(j+1))
-	$
 ]
-
-
-
-== Boson & Fermions
-Hello world
-
